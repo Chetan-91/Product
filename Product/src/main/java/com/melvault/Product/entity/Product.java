@@ -12,9 +12,9 @@ import org.springframework.http.HttpStatus;
 @Table(name="Production_TBL")
 public class Product {
 
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
- private Integer id;
+ @Id
+ @GeneratedValue(strategy=GenerationType.AUTO)
+ private int id;
  private String name;
  private float price;
 	

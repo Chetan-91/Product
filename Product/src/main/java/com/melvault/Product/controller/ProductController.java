@@ -28,7 +28,7 @@ public class ProductController {
 		return service.listAll();
 	}
 	
-	@GetMapping("/products/{id}")
+	@GetMapping("/allproducts/{id}")
 	public ResponseEntity<Product> get(@PathVariable Integer id){
 		try {
 			Product product=service.get(id);
