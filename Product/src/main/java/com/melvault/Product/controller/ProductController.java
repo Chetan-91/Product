@@ -61,14 +61,16 @@ public class ProductController {
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	public HttpStatus delete(@PathVariable Integer id) {
-		service.delete(id);
-		return HttpStatus.FORBIDDEN;
+	public ResponseEntity<Product> delete(@PathVariable Integer id) {
+		try {
+		
+		     Product product=service.delete(id);
+		      return new ResponseEntity<Product>(product,HttpStatus.OK);
+	     }catch (NoSuchElementException e) {
+		      return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
+
+		     }
 	}
-
-
-
-
 
 
 }

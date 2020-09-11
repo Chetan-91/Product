@@ -16,70 +16,44 @@ public class Product {
  @GeneratedValue(strategy=GenerationType.AUTO)
  private int id;
  private String name;
- private float price;
-	
-	
-	public Product(int id, String name, float price) {
-
-	this.id = id;
-	this.name = name;
-	this.price = price;
-}
-
-
-
-
-
-	public int getId() {
+ private Integer salary;	
+ private Integer age;
+ private Integer exp;
+ 
+ 
+public int getId() {
 	return id;
 }
-
-
-
-
-
 public void setId(int id) {
 	this.id = id;
 }
-
-
-
-
-
 public String getName() {
 	return name;
 }
-
-
-
-
-
 public void setName(String name) {
 	this.name = name;
 }
 
-
-
-
-
-public float getPrice() {
-	return price;
+public Integer getSalary() {
+	return salary;
 }
-
-
-
-
-
-public void setPrice(float price) {
-	this.price = price;
+public void setSalary(Integer salary) {
+	this.salary = salary;
 }
+public Integer getAge() {
+	return age;
+}
+public void setAge(Integer age) {
+	this.age = age;
+}
+public Integer getExp() {
+	return exp;
+}
+public void setExp(Integer exp) {
+	this.exp = exp;
+}
+ 
+ 
 
-
-
-
-
-  public Product() {
-		// TODO Auto-generated constructor stub
-	}
 
 }

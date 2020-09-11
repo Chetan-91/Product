@@ -26,8 +26,10 @@ public class ProductService {
 		return repo.findById(id).get();
 	}
 	
-	public void delete(Integer id){
-		 repo.deleteById(id);
+	public Product delete(Integer id){
+	 repo.deleteById(id);
+	return null;
+
 	}
 	
 }
